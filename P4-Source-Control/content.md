@@ -86,7 +86,7 @@ If they didn't, have them run that command, then push to bitbucket (using the ab
 
 Next, have them invite the other collaborators to the bitbucket repo through the online portal. All collaborators need to copy the URL of this repo:
 
-[Bitbucket screenshot](./1-bitbucket-url.png "Bitbucket screenshot")
+![Bitbucket screenshot](./1-bitbucket-url.png "Bitbucket screenshot")
 
 Then, in terminal, collaborators need to run the following commands (replace the angle brackets with the right info):
 
@@ -109,7 +109,7 @@ git pull --no-edit
 
 'git pull --no-edit' will automatically pull and merge changes. If 'git pull --no-edit' throws an error (see below), simply use 'git pull' instead
 
-[No edit](./2-no-edit.png "No edit")
+![No edit](./2-no-edit.png "No edit")
 
 Normally this will work magically. If there no merge conflicts (read on to find out about merge conflicts), simply push the code back up to bitbucket with the command:
 
@@ -119,19 +119,19 @@ CRITICAL INFORMATION: 2 weird things can happen when you pull:
 
 1. If one person removed a file from the project, and another added a file to the project, you might get into a broken state where Xcode thinks a file should exist, but doesn't know where it is:
 
-[Missing files](./3-missing-files.png "Missing files")
+![Missing files](./3-missing-files.png "Missing files")
 
 In this case just right click on those files and delete them.
 
 2. Sometimes when you pull, there are merge conflicts (when git can't auto merge the changes, typically when two people changed the same line), terminal will show something like:
 
-[Git Pull](./4-git-pull.png "Git Pull")
+![Git Pull](./4-git-pull.png "Git Pull")
 
 WARNING: If there is a merge conflict in the .xcodeproj/project.pbxproj, email support@makegameswith.us, we will screenshare with you and fix the problem. If you decide to be bold and try to fix it yourself ZIP UP THE FOLDER AND MAKE A COPY FIRST, otherwise you could ruin any hope of recovery
 
 If there is a merge conflict in any other file (for example a .h or .m), open the file in xcode, and go through / decide which version of the code to keep:
 
-[XCode Merge Conflict](./5-show-versions.png "XCode Merge Conflict")
+![XCode Merge Conflict](./5-show-versions.png "XCode Merge Conflict")
 
 The code between \<\<\<\<\<\<\< and ======= is your version of the file, the code between ======= and >>>>>>> is the version from your collaborators. Go through the file and decide which version you want to keep, sometimes you'll want to keep bits and pieces of both. Make sure to remove the lines that include \<\<\<\<\<\<\<, =======, and >>>>>>> and save the file.
 
